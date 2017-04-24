@@ -4,7 +4,7 @@ ADD https://raw.githubusercontent.com/composer/getcomposer.org/1b137f8bf6db3e79a
 RUN a2enmod rewrite \
   && apt-get update \
   && apt-get install -y ghostscript pdftohtml imagemagick libmemcached11 libmemcachedutil2 \
-  build-essential libmemcached-dev libz-dev openssh-client git-core libmagickwand-dev html2ps --no-install-recommends \
+  build-essential libmemcached-dev libz-dev openssh-client git-core libmagickwand-dev html2ps libxml2-utils --no-install-recommends \
   && pecl install memcache \
   && pecl install imagick \
   && docker-php-ext-install mysql pdo_mysql zip \
