@@ -15,7 +15,7 @@ RUN a2enmod rewrite \
   && php /usr/src/installer && mv /var/www/html/composer.phar /usr/local/bin/composer \
   && mkdir -p /var/www/.composer \
   && chown www-data:www-data /var/www/.composer \
-  && apt-get remove -y build-essential libmemcached-dev libz-dev \
+  && apt-get remove -y --purge build-essential gcc cpp libmemcached-dev libz-dev \
   && apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /tmp/pear \
